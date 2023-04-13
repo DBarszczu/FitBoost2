@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "788361454467",
+    "project_id": "fitboost2-bbadb",
+    "storage_bucket": "fitboost2-bbadb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788361454467:android:5b57607ef8774a1d008cb6",
+        "android_client_info": {
+          "package_name": "com.example.fitboost2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788361454467-uec50agitkhfu23ii5pr1bbash1gf25u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fitboost2",
+            "certificate_hash": "9ea7cf5fc615a7689919b3b7f9e4196757ce1a22"
+          }
+        },
+        {
+          "client_id": "788361454467-c30jnheiu3uh9c282pk67pjbs2tkdtpu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWGzwNNSbT5C5ubDCVyw7CdL61KYdfxPk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788361454467-c30jnheiu3uh9c282pk67pjbs2tkdtpu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

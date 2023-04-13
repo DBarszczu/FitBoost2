@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login_SignUp.SignupActivity">
+
+    <EditText
+        android:id="@+id/signupemail"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:paddingLeft="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/signuppassword"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="@id/signupemail"
+        app:layout_constraintStart_toStartOf="@id/signupemail"
+        app:layout_constraintTop_toBottomOf="@id/signupemail" />
+
+    <EditText
+        android:id="@+id/signupconfirmepassword"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="ConfirmePassword"
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="@id/signuppassword"
+        app:layout_constraintStart_toStartOf="@id/signuppassword"
+        app:layout_constraintTop_toBottomOf="@id/signuppassword" />
+
+    <Button
+        android:id="@+id/bntsignupaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        app:layout_constraintEnd_toEndOf="@id/signupconfirmepassword"
+        app:layout_constraintStart_toStartOf="@id/signupconfirmepassword"
+        app:layout_constraintTop_toBottomOf="@id/signupconfirmepassword"/>
+
+    <TextView
+        android:id="@+id/alreadyanuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already an user? Login"
+        app:layout_constraintEnd_toEndOf="@id/bntsignupaccount"
+        app:layout_constraintStart_toStartOf="@id/bntsignupaccount"
+        app:layout_constraintTop_toBottomOf="@id/bntsignupaccount"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

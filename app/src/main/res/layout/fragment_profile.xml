@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <TextView
+                android:id="@+id/bntpersolandataProfile"
+                style="@style/TextViewProfileStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/baseline_person_4_24"
+                android:text="Personal data" />
+
+            <TextView
+                android:id="@+id/bntsummaryProfile"
+                style="@style/TextViewProfileStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/baseline_summarize_24"
+                android:text="Summary" />
+
+            <TextView
+                android:id="@+id/bntbodymeasurementsProfile"
+                style="@style/TextViewProfileStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Body measurements"
+                android:drawableLeft="@drawable/baseline_monitor_weight_24"/>
+
+            <TextView
+                android:id="@+id/bntcalculatorProfile"
+                style="@style/TextViewProfileStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/baseline_calculate_24"
+                android:text="Calculator" />
+
+            <TextView
+                android:id="@+id/bntsettingsProfile"
+                style="@style/TextViewProfileStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/baseline_settings_24"
+                android:text="Settings" />
+
+            <TextView
+                android:id="@+id/bntlogoutProfile"
+                style="@style/TextViewProfileStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/baseline_logout_24"
+                android:text="Log out"
+                android:layout_marginBottom="0dp"/>
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text=""
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

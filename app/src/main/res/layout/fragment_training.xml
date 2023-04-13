@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrainingFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bntChestTraining"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:text="Chest"
+            app:cornerRadius="15dp" />
+
+        <Button
+            android:id="@+id/bntShouldersTraining"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_marginLeft="15dp"
+            android:text="Shoulders"
+            app:cornerRadius="15dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bntBicepsTraining"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:text="Biceps"
+            app:cornerRadius="15dp"
+            />
+
+        <Button
+            android:id="@+id/bntTricpesTraininig"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_marginLeft="15dp"
+            android:text="Triceps"
+            app:cornerRadius="15dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bntBackTraining"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:text="Back"
+            app:cornerRadius="15dp" />
+
+        <Button
+            android:id="@+id/bntButtocksTraining"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_marginLeft="15dp"
+            android:text="Buttocks"
+            app:cornerRadius="15dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bntLegsTraining"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:text="Legs"
+            app:cornerRadius="15dp" />
+
+        <Button
+            android:id="@+id/bntBellyTraining"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_marginLeft="15dp"
+            android:text="Belly"
+            app:cornerRadius="15dp"/>
+
+    </LinearLayout>
+</LinearLayout>
+</FrameLayout>
