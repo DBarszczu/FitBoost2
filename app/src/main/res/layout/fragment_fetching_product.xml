@@ -14,6 +14,7 @@
         android:fontFamily="@font/barlow_semi_condensed_black"
         android:text="Search for a product"
         android:textAlignment="center"
+        android:textColor="@color/Szarawy_ciemny"
         android:textSize="15pt" />
 
     <LinearLayout
@@ -26,15 +27,16 @@
             android:id="@+id/search"
             android:layout_width="330dp"
             android:layout_height="50dp"
-            android:background="@drawable/border" />
+            android:background="@drawable/border_list_iteam" />
 
         <TextView
             android:id="@+id/addProduct"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:background="@drawable/border"
-            android:drawableTop="@drawable/baseline_add_24" />
+            android:background="@drawable/border_list_iteam"
+            android:drawableLeft="@drawable/baseline_add_30"
+            android:padding="10dp"/>
     </LinearLayout>
 
 

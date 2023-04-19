@@ -7,7 +7,8 @@
     android:layout_gravity="center_horizontal"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="20dp"
+    >
 
 
     <TextView
@@ -16,7 +17,7 @@
         android:layout_height="match_parent"
         android:text="Choose your goal:"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/Szarawy_ciemny"
         android:textSize="15pt"
         android:textStyle="bold" />
 
@@ -25,33 +26,36 @@
         android:id="@+id/goalRadioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/loseWeightRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/black"
+            android:buttonTint="@color/Szarawy_ciemny"
+            android:fontFamily="@font/barlow_semi_condensed_bold"
             android:text="Lose weight"
-            android:textColor="@color/black" />
+            android:textColor="@color/Szarawy_ciemny" />
 
         <RadioButton
             android:id="@+id/keepWeightRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/black"
+            android:buttonTint="@color/Szarawy_ciemny"
+            android:fontFamily="@font/barlow_semi_condensed_bold"
             android:text="Keep weight"
-            android:textColor="@color/black" />
+            android:textColor="@color/Szarawy_ciemny" />
 
         <RadioButton
             android:id="@+id/gainWeightRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/black"
+            android:buttonTint="@color/Szarawy_ciemny"
+            android:fontFamily="@font/barlow_semi_condensed_bold"
             android:text="Gain weight"
-            android:textColor="@color/black" />
+            android:textColor="@color/Szarawy_ciemny" />
 
     </RadioGroup>
 
@@ -59,39 +63,42 @@
         android:id="@+id/genderTextView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/barlow_semi_condensed_bold"
         android:text="Select your gender:"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/Szarawy_ciemny"
         android:textSize="10pt"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"/>
+        android:textStyle="bold" />
 
     <RadioGroup
         android:id="@+id/genderRadioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/maleRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/black"
+            android:buttonTint="@color/Szarawy_ciemny"
             android:drawableRight="@drawable/baseline_male_24"
+            android:fontFamily="@font/barlow_semi_condensed_bold"
             android:text="Male"
-            android:textColor="@color/black" />
+            android:textColor="@color/Szarawy_ciemny" />
 
         <RadioButton
             android:id="@+id/femaleRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/black"
+            android:buttonTint="@color/Szarawy_ciemny"
             android:drawableRight="@drawable/baseline_female_24"
+            android:fontFamily="@font/barlow_semi_condensed_bold"
             android:text="Female"
-            android:textColor="@color/black" />
+            android:textColor="@color/Szarawy_ciemny" />
 
     </RadioGroup>
 
@@ -99,61 +106,67 @@
         android:id="@+id/activityLevelTextView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/barlow_semi_condensed_bold"
         android:text="Select your activity level:"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/Szarawy_ciemny"
         android:textSize="10pt"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"/>
+        android:textStyle="bold" />
 
 
     <Spinner
         android:id="@+id/activityLevelSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:entries="@array/activity_levels"
-        android:popupBackground="@color/white"
-        android:prompt="@string/activity_level_prompt"
-        android:layout_marginTop="20dp"/>
+        android:fontFamily="@font/barlow_semi_condensed_bold"
+        android:prompt="@string/activity_level_prompt" />
 
     <EditText
         android:id="@+id/ageEditText"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/barlow_semi_condensed_medium"
         android:hint="Enter your age in years"
         android:inputType="number"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textColorLink="@color/black"
-        android:layout_marginTop="20dp"/>
+        android:textColor="@color/Szarawy_ciemny"
+        android:textColorHint="@color/Szarawy_ciemny"
+        android:textColorLink="@color/Szarawy_ciemny" />
 
     <EditText
         android:id="@+id/weightEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/barlow_semi_condensed_medium"
         android:hint="Enter your weight in kilograms"
         android:inputType="numberDecimal"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:layout_marginTop="20dp"/>
+        android:textColor="@color/Szarawy_ciemny"
+        android:textColorHint="@color/Szarawy_ciemny" />
 
     <EditText
         android:id="@+id/heightEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/barlow_semi_condensed_medium"
         android:hint="Enter your height in centimeters"
         android:inputType="number"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:layout_marginTop="20dp"/>
+        android:textColor="@color/Szarawy_ciemny"
+        android:textColorHint="@color/Szarawy_ciemny" />
 
     <Button
         android:id="@+id/calculateButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/barlow_semi_condensed_black"
         android:text="Calculate BMI"
-        android:textSize="16sp"
-        android:layout_marginTop="15dp"/>
+        android:textSize="10pt" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -165,9 +178,10 @@
             android:id="@+id/resultTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/barlow_semi_condensed_black"
             android:gravity="center"
             android:text=""
-            android:textColor="@color/black"
+            android:textColor="@color/Szarawy_ciemny"
             android:textSize="20sp" />
 
     </LinearLayout>

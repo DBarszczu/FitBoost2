@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="8dp"
-    app:cardCornerRadius="8dp"
+    app:cardCornerRadius="10dp"
     android:layout_margin="8dp">
 
     <LinearLayout
@@ -28,10 +28,10 @@
                 android:text="Emp Name"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:layout_marginRight="50dp"/>
+                android:fontFamily="@font/barlow_semi_condensed_bold"
+                android:textColor="@color/Szarawy_ciemny"
+                android:textSize="36sp"
+                android:textStyle="bold" />
 
 
 

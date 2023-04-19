@@ -3,7 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    android:padding="10sp"
+    tools:context=".ProfileFragment"
+
+
+    >
 
 
     <ScrollView
@@ -14,65 +18,90 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="25dp">
+            android:padding="30dp">
 
             <TextView
                 android:id="@+id/bntpersolandataProfile"
                 style="@style/TextViewProfileStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/baseline_person_4_24"
+                android:drawableLeft="@drawable/baseline_person_4_30"
                 android:text="Personal data" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/Szarawy_ciemny" />
 
             <TextView
                 android:id="@+id/bntsummaryProfile"
                 style="@style/TextViewProfileStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/baseline_summarize_24"
+                android:drawableLeft="@drawable/baseline_summarize_30"
                 android:text="Summary" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/Szarawy_ciemny" />
 
             <TextView
                 android:id="@+id/bntbodymeasurementsProfile"
                 style="@style/TextViewProfileStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Body measurements"
-                android:drawableLeft="@drawable/baseline_monitor_weight_24"/>
+                android:drawableLeft="@drawable/baseline_monitor_weight_30"
+                android:text="Body measurements" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/Szarawy_ciemny" />
 
             <TextView
                 android:id="@+id/bntcalculatorProfile"
                 style="@style/TextViewProfileStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/baseline_calculate_24"
+                android:drawableLeft="@drawable/baseline_calculate_30"
                 android:text="Calculator" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/Szarawy_ciemny" />
 
             <TextView
                 android:id="@+id/bntsettingsProfile"
                 style="@style/TextViewProfileStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/baseline_settings_24"
+                android:drawableLeft="@drawable/baseline_settings_30"
                 android:text="Settings" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/Szarawy_ciemny" />
 
             <TextView
                 android:id="@+id/bntlogoutProfile"
                 style="@style/TextViewProfileStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/baseline_logout_24"
-                android:text="Log out"
-                android:layout_marginBottom="0dp"/>
+                android:layout_marginBottom="0dp"
+                android:drawableLeft="@drawable/baseline_logout_30"
+                android:text="Log out" />
+
+
             <TextView
                 android:id="@+id/tvEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:text=""
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                />
+                android:textColor="@color/Szarawy_ciemny"
+                android:textStyle="bold" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/Szarawy_ciemny" />
         </LinearLayout>
     </ScrollView>
 </FrameLayout>

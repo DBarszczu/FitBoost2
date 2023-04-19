@@ -15,18 +15,27 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/barlow_semi_condensed_black"
             android:text="Product details"
-            android:textSize="18pt"
             android:textAlignment="center"
-            android:fontFamily="@font/barlow_semi_condensed_black"/>
+            android:textColor="@color/Szarawy_ciemny"
+            android:textSize="18pt" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/barlow_semi_condensed_bold"
+            android:text="per 100g"
+            android:textAlignment="center"
+            android:textColor="@color/Szarawy_ciemny"
+            android:textSize="10pt" />
 
 
         <LinearLayout
-            android:layout_marginTop="50dp"
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,20 +51,22 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/barlow_semi_condensed_medium"
                     android:gravity="right"
                     android:text="Name: "
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textColor="@color/Szarawy_ciemny"
+                    android:textSize="20sp"
                     android:textStyle="italic" />
 
                 <TextView
                     android:id="@+id/tvProductName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/barlow_semi_condensed_bold"
                     android:text=""
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textColor="@color/Szarawy_ciemny"
+                    android:textSize="20sp"
 
                     />
 
@@ -71,20 +82,22 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/barlow_semi_condensed_medium"
                     android:gravity="right"
                     android:text="Kcal:"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textColor="@color/Szarawy_ciemny"
+                    android:textSize="20sp"
                     android:textStyle="italic" />
 
                 <TextView
                     android:id="@+id/tvProductCalories"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/barlow_semi_condensed_bold"
                     android:text=""
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    android:textColor="@color/Szarawy_ciemny"
+                    android:textSize="20sp" />
 
 
             </LinearLayout>
@@ -99,20 +112,22 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/barlow_semi_condensed_medium"
                     android:gravity="right"
                     android:text="Fat: "
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textColor="@color/Szarawy_ciemny"
+                    android:textSize="20sp"
                     android:textStyle="italic" />
 
                 <TextView
                     android:id="@+id/tvProductFat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/barlow_semi_condensed_bold"
                     android:text=""
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textColor="@color/Szarawy_ciemny"
+                    android:textSize="20sp"
 
                     />
 
@@ -128,10 +143,11 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/barlow_semi_condensed_medium"
                     android:gravity="right"
                     android:text="Protein: "
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textColor="@color/Szarawy_ciemny"
+                    android:textSize="20sp"
                     android:textStyle="italic" />
 
 
@@ -139,10 +155,11 @@
                     android:id="@+id/tvProductProtein"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/barlow_semi_condensed_bold"
                     android:text=""
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    android:textColor="@color/Szarawy_ciemny"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -155,20 +172,22 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/barlow_semi_condensed_medium"
                     android:gravity="right"
                     android:text="Carbs: "
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textColor="@color/Szarawy_ciemny"
+                    android:textSize="20sp"
                     android:textStyle="italic" />
 
                 <TextView
                     android:id="@+id/tvProductCarbs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/barlow_semi_condensed_bold"
                     android:text=""
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    android:textColor="@color/Szarawy_ciemny"
+                    android:textSize="20sp" />
 
 
             </LinearLayout>
@@ -177,33 +196,49 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="50dp"
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@drawable/round_autorenew_30"
+                    android:fontFamily="@font/barlow_semi_condensed_black"
+                    android:text="Update"
+                    android:textSize="10pt"
+                    app:cornerRadius="8dp" />
+
+                <Button
+                    android:id="@+id/btnDelete"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:drawableRight="@drawable/baseline_delete_30"
+                    android:fontFamily="@font/barlow_semi_condensed_black"
+                    android:text="Delete"
+                    android:textSize="10pt"
+                    app:cornerRadius="8dp" />
+            </LinearLayout>
 
             <Button
-                android:id="@+id/btnUpdate"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:drawableRight="@drawable/round_autorenew_30"
-                android:text="Update" />
-
-            <Button
-                android:id="@+id/btnDelete"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="50dp"
-                android:drawableRight="@drawable/baseline_delete_30"
-                android:text="Delete" />
+                android:id="@+id/addproducttomeals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/baseline_add_30"
+                android:fontFamily="@font/barlow_semi_condensed_black"
+                android:text="Add to meals"
+                android:textSize="10pt"
+                app:cornerRadius="8dp" />
         </LinearLayout>
-
-        <Button
-            android:id="@+id/addproducttomeals"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableRight="@drawable/baseline_add_30"
-            android:text="Add to meals" />
     </LinearLayout>
 </FrameLayout>

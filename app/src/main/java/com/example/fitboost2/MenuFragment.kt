@@ -97,7 +97,7 @@ class MenuFragment : Fragment() {
                 }
                 // wyświetlenie sumy kalorii na ekranie
                 val tvSumCalories = rootView.findViewById<TextView>(R.id.calories)
-                tvSumCalories.text = sumCalories.toString()
+                tvSumCalories.text = String.format("%.1f", sumCalories)
 
                 // odejmowanie kalorii od BMR i wyświetlanie wyniku
                 val dbRefBmr = FirebaseDatabase.getInstance().getReference("Users/$userId/bmr")
@@ -106,7 +106,8 @@ class MenuFragment : Fragment() {
                         val userBmr = bmrSnapshot.value.toString().toDouble()
                         val bmrAfterSubtraction = userBmr - sumCalories
                         val tvBmrAfterSubtraction = rootView.findViewById<TextView>(R.id.bmrAfterSubtraction)
-                        tvBmrAfterSubtraction.text = bmrAfterSubtraction.toString()
+                        tvBmrAfterSubtraction.text = String.format("%.1f", bmrAfterSubtraction)
+
                     }
 
                     override fun onCancelled(databaseError: DatabaseError) {
@@ -115,13 +116,13 @@ class MenuFragment : Fragment() {
                 })
 
                 val tvSumCarbs = rootView.findViewById<TextView>(R.id.carbs)
-                tvSumCarbs.text = sumCarbs.toString()
+                tvSumCarbs.text = String.format("%.1f", sumCarbs)
 
                 val tvSumProteins = rootView.findViewById<TextView>(R.id.proteins)
-                tvSumProteins.text = sumProteins.toString()
+                tvSumProteins.text = String.format("%.1f", sumProteins)
 
                 val tvSumFat = rootView.findViewById<TextView>(R.id.fat)
-                tvSumFat.text = sumFat.toString()
+                tvSumFat.text = String.format("%.1f", sumFat)
             }
 
 
@@ -193,6 +194,7 @@ class MenuFragment : Fragment() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 userBmr = dataSnapshot.value.toString().toDouble()
                 tvBmr.text = userBmr.toString()
+
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
