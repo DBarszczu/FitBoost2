@@ -10,9 +10,9 @@
     <item android:title="Menu"
         android:id="@+id/menu"
         android:icon="@drawable/baseline_fastfood_24"/>
-    <item android:title="Calender"
-        android:id="@+id/calender"
-        android:icon="@drawable/baseline_calendar_month_24"/>
+    <item android:title="Diet"
+        android:id="@+id/diet"
+        android:icon="@drawable/baseline_food_bank_24"/>
     <item android:title="Profile"
         android:id="@+id/profile"
         android:icon="@drawable/baseline_person_24"/>

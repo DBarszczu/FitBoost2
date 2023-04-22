@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="35dp"
+    android:paddingRight="35dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:id="@+id/goLunchFromSnack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/baseline_arrow_circle_left_36"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:layout_width="235dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/barlow_semi_condensed_black"
+                android:text="Snack"
+                android:textAlignment="center"
+                android:textColor="@color/Szarawy_ciemny"
+                android:textSize="20pt" />
+
+            <TextView
+                android:id="@+id/goDinnerFromSnack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:drawableRight="@drawable/baseline_arrow_circle_right_36"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mealPlanNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/barlow_semi_condensed_black"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/Szarawy_ciemny"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="490dp"
+            android:background="@drawable/border_list_diet"
+            android:padding="2dp">
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <TextView
+                    android:id="@+id/mealPlanDescriptionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:width="1000dp"
+                    android:fontFamily="@font/barlow_semi_condensed_medium"
+                    android:padding="10dp"
+                    android:text=""
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/Szarawy_ciemny"
+                    android:textSize="20sp" />
+            </ScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

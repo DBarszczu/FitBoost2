@@ -20,14 +20,7 @@
             android:textSize="18pt"
             android:textAlignment="center"
             android:fontFamily="@font/barlow_semi_condensed_black"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/barlow_semi_condensed_bold"
-            android:text="per 100g"
-            android:textColor="@color/Szarawy_ciemny"
-            android:textAlignment="center"
-            android:textSize="10pt" />
+
 
         <LinearLayout
             android:layout_marginTop="50dp"
@@ -198,7 +191,7 @@
                     android:id="@+id/btnUpdateMeal"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:drawableRight="@drawable/round_autorenew_30"
+                    android:drawableRight="@drawable/baseline_autorenew_30"
                     android:text="Update"
                     android:textSize="10pt"
                     android:fontFamily="@font/barlow_semi_condensed_black" />

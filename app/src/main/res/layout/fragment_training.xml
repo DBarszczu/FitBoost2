@@ -22,6 +22,8 @@
             android:layout_width="165dp"
             android:layout_height="165dp"
             android:text="Chest"
+            android:textSize="22sp"
+            android:fontFamily="@font/barlow_semi_condensed_black"
             app:cornerRadius="15dp" />
 
         <Button
@@ -30,6 +32,8 @@
             android:layout_height="165dp"
             android:layout_marginLeft="15dp"
             android:text="Shoulders"
+            android:textSize="22sp"
+            android:fontFamily="@font/barlow_semi_condensed_black"
             app:cornerRadius="15dp"/>
 
     </LinearLayout>
@@ -46,6 +50,8 @@
             android:layout_width="165dp"
             android:layout_height="165dp"
             android:text="Biceps"
+            android:textSize="22sp"
+            android:fontFamily="@font/barlow_semi_condensed_black"
             app:cornerRadius="15dp"
             />
 
@@ -55,6 +61,8 @@
             android:layout_height="165dp"
             android:layout_marginLeft="15dp"
             android:text="Triceps"
+            android:textSize="22sp"
+            android:fontFamily="@font/barlow_semi_condensed_black"
             app:cornerRadius="15dp"/>
 
     </LinearLayout>
@@ -71,6 +79,8 @@
             android:layout_width="165dp"
             android:layout_height="165dp"
             android:text="Back"
+            android:textSize="22sp"
+            android:fontFamily="@font/barlow_semi_condensed_black"
             app:cornerRadius="15dp" />
 
         <Button
@@ -79,6 +89,8 @@
             android:layout_height="165dp"
             android:layout_marginLeft="15dp"
             android:text="Buttocks"
+            android:textSize="22sp"
+            android:fontFamily="@font/barlow_semi_condensed_black"
             app:cornerRadius="15dp"/>
 
     </LinearLayout>
@@ -95,6 +107,8 @@
             android:layout_width="165dp"
             android:layout_height="165dp"
             android:text="Legs"
+            android:textSize="22sp"
+            android:fontFamily="@font/barlow_semi_condensed_black"
             app:cornerRadius="15dp" />
 
         <Button
@@ -103,6 +117,8 @@
             android:layout_height="165dp"
             android:layout_marginLeft="15dp"
             android:text="Belly"
+            android:textSize="22sp"
+            android:fontFamily="@font/barlow_semi_condensed_black"
             app:cornerRadius="15dp"/>
 
     </LinearLayout>

@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     android:padding="36dp">
 
+
+    <TextView
+        android:id="@+id/addProductInsertion"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add product"
+        android:textColor="@color/Szarawy_ciemny"
+        android:textSize="18pt"
+        android:textAlignment="center"
+        android:fontFamily="@font/barlow_semi_condensed_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
     <EditText
         android:id="@+id/etProductName"
         android:layout_width="0dp"
@@ -15,12 +30,12 @@
         android:fontFamily="@font/barlow_semi_condensed_medium"
         android:hint="Enter name"
         android:inputType="textPersonName"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textColor="@color/Szarawy_ciemny"
+        android:textColorHint="@color/Szarawy_ciemny"
         android:paddingLeft="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/addProductInsertion" />
 
     <EditText
         android:id="@+id/etProductCalories"
@@ -31,9 +46,9 @@
         android:fontFamily="@font/barlow_semi_condensed_medium"
         android:hint="Enter Calories"
         android:inputType="textPersonName"
-        android:textColor="@color/white"
+        android:textColor="@color/Szarawy_ciemny"
         android:paddingLeft="8dp"
-        android:textColorHint="@color/white"
+        android:textColorHint="@color/Szarawy_ciemny"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etProductName" />
@@ -47,9 +62,9 @@
         android:fontFamily="@font/barlow_semi_condensed_medium"
         android:hint="Enter Fat"
         android:inputType="textPersonName"
-        android:textColor="@color/white"
+        android:textColor="@color/Szarawy_ciemny"
         android:paddingLeft="8dp"
-        android:textColorHint="@color/white"
+        android:textColorHint="@color/Szarawy_ciemny"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etProductCalories" />
@@ -64,8 +79,8 @@
         android:hint="Enter Protein"
         android:paddingLeft="8dp"
         android:inputType="textPersonName"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textColor="@color/Szarawy_ciemny"
+        android:textColorHint="@color/Szarawy_ciemny"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etProductFat" />
@@ -80,8 +95,8 @@
         android:fontFamily="@font/barlow_semi_condensed_medium"
         android:hint="Enter Carbs"
         android:inputType="textPersonName"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textColor="@color/Szarawy_ciemny"
+        android:textColorHint="@color/Szarawy_ciemny"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etProductProtein" />

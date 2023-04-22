@@ -19,6 +19,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import java.text.SimpleDateFormat
 import java.util.*
 
 class ProductDetailsFragment : Fragment() {
@@ -82,7 +83,18 @@ class ProductDetailsFragment : Fragment() {
                                 )
                             }
 
-                            val userMealsRef = FirebaseDatabase.getInstance().getReference("Users/$userId/Meals")
+                            val calendar = Calendar.getInstance()
+                            val date1 = calendar.time
+                            val date2 = calendar.time
+                            val date3 = calendar.time
+                            val dateFormatDay = SimpleDateFormat("dd", Locale.getDefault())
+                            val dateFormatYear = SimpleDateFormat("yyyy", Locale.getDefault())
+                            val dateFormatMonth = SimpleDateFormat("MM", Locale.getDefault())
+                            val dateStringDay = dateFormatDay.format(date1)
+                            val dateStringYear = dateFormatYear.format(date2)
+                            val dateStringMonth = dateFormatMonth.format(date3)
+                            val userMealsRef = FirebaseDatabase.getInstance().getReference("Users/$userId/Meals/$dateStringYear/$dateStringMonth/$dateStringDay")
+
                             modifiedProduct?.let {
                                 modifiedProduct.ProductId?.let { it1 -> userMealsRef.child(it1).setValue(it) } // use the modified product ID here
                                 Toast.makeText(requireContext(), "Product copied to meals", Toast.LENGTH_LONG).show()

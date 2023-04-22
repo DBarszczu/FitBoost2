@@ -17,6 +17,9 @@ import com.example.fitboost2.R
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Locale
 
 class MealDetailsFragment : Fragment() {
 
@@ -58,7 +61,19 @@ class MealDetailsFragment : Fragment() {
     private fun deleteRecord(
         id: String
     ){
-        val dbRef = FirebaseDatabase.getInstance().getReference("Users/$userId/Meals").child(id)
+
+
+        val calendar = Calendar.getInstance()
+        val date1 = calendar.time
+        val date2 = calendar.time
+        val date3 = calendar.time
+        val dateFormatDay = SimpleDateFormat("dd", Locale.getDefault())
+        val dateFormatYear = SimpleDateFormat("yyyy", Locale.getDefault())
+        val dateFormatMonth = SimpleDateFormat("MM", Locale.getDefault())
+        val dateStringDay = dateFormatDay.format(date1)
+        val dateStringYear = dateFormatYear.format(date2)
+        val dateStringMonth = dateFormatMonth.format(date3)
+        val dbRef = FirebaseDatabase.getInstance().getReference("Users/$userId/Meals/$dateStringYear/$dateStringMonth/$dateStringDay").child(id)
         val mTask = dbRef.removeValue()
         mTask.addOnSuccessListener {
             Toast.makeText(requireContext(), "Product data deleted", Toast.LENGTH_LONG).show()
@@ -88,11 +103,12 @@ class MealDetailsFragment : Fragment() {
 
     private fun setValuesToViews() {
         tvProductName.text = requireArguments().getString("ProductName")
-        tvProductCalories.text = requireArguments().getString("ProductCalories")
-        tvProductFat.text = requireArguments().getString("ProductFat")
-        tvProductProtein.text = requireArguments().getString("ProductProtein")
-        tvProductCarbs.text = requireArguments().getString("ProductCarbs")
+        tvProductCalories.text = String.format("%.1f", requireArguments().getString("ProductCalories")?.toFloat())
+        tvProductFat.text = String.format("%.1f", requireArguments().getString("ProductFat")?.toFloat())
+        tvProductProtein.text = String.format("%.1f", requireArguments().getString("ProductProtein")?.toFloat())
+        tvProductCarbs.text = String.format("%.1f", requireArguments().getString("ProductCarbs")?.toFloat())
     }
+
 
 
 
@@ -111,6 +127,7 @@ class MealDetailsFragment : Fragment() {
         val etProductFat = mDialogView.findViewById<EditText>(R.id.etProductFat)
         val etProductProtein = mDialogView.findViewById<EditText>(R.id.etProductProtein)
         val etProductCarbs = mDialogView.findViewById<EditText>(R.id.etProductCarbs)
+
 
         val btnUpdateData = mDialogView.findViewById<Button>(R.id.btnUpdateData)
 
@@ -144,6 +161,9 @@ class MealDetailsFragment : Fragment() {
             tvProductProtein.text = etProductProtein.text.toString()
             tvProductCarbs.text = etProductCarbs.text.toString()
 
+
+
+
             alertDialog.dismiss()
         }
 
@@ -157,7 +177,18 @@ class MealDetailsFragment : Fragment() {
         protein: Double,
         carbs: Double
     ) {
-        val dbRef = FirebaseDatabase.getInstance().getReference("Users/$userId/Meals").child(id)
+
+        val calendar = Calendar.getInstance()
+        val date1 = calendar.time
+        val date2 = calendar.time
+        val date3 = calendar.time
+        val dateFormatDay = SimpleDateFormat("dd", Locale.getDefault())
+        val dateFormatYear = SimpleDateFormat("yyyy", Locale.getDefault())
+        val dateFormatMonth = SimpleDateFormat("MM", Locale.getDefault())
+        val dateStringDay = dateFormatDay.format(date1)
+        val dateStringYear = dateFormatYear.format(date2)
+        val dateStringMonth = dateFormatMonth.format(date3)
+        val dbRef = FirebaseDatabase.getInstance().getReference("Users/$userId/Meals/$dateStringYear/$dateStringMonth/$dateStringDay").child(id)
         val empInfo = ProductModel(id, name, calories, fat, protein, carbs)
         dbRef.setValue(empInfo)
     }

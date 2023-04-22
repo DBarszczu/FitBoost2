@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.home -> replaceFragment(HomeFragment())
                 R.id.training -> replaceFragment(TrainingFragment())
                 R.id.menu -> replaceFragment(MenuFragment())
-                R.id.calender -> replaceFragment(CalenderFragment())
+                R.id.diet -> replaceFragment(DietFragment())
                 R.id.profile -> replaceFragment(ProfileFragment())
 
                 else -> {

@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.fitboost2.Menu.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import java.text.SimpleDateFormat
 
 class MenuFragment : Fragment() {
 
@@ -31,7 +32,8 @@ class MenuFragment : Fragment() {
     private lateinit var dayOfWeekTextView: TextView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?): View? {
+        savedInstanceState: Bundle?
+    ): View? {
         val rootView = inflater.inflate(R.layout.fragment_menu, container, false)
 
         btnFetchData = rootView.findViewById(R.id.btnFetchData)
@@ -68,9 +70,6 @@ class MenuFragment : Fragment() {
             }
         })
 
-
-
-
         btnFetchData.setOnClickListener {
             val fragment = FetchingFragmentProduct()
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
@@ -79,8 +78,19 @@ class MenuFragment : Fragment() {
             transaction.commit()
         }
 
+        val calendar = Calendar.getInstance()
+        val date1 = calendar.time
+        val date2 = calendar.time
+        val date3 = calendar.time
+        val dateFormatDay = SimpleDateFormat("dd", Locale.getDefault())
+        val dateFormatYear = SimpleDateFormat("yyyy", Locale.getDefault())
+        val dateFormatMonth = SimpleDateFormat("MM", Locale.getDefault())
+        val dateStringDay = dateFormatDay.format(date1)
+        val dateStringYear = dateFormatYear.format(date2)
+        val dateStringMonth = dateFormatMonth.format(date3)
         getProductsData()
-        val dbRef = FirebaseDatabase.getInstance().getReference("Users/$userId/Meals")
+        val dbRef = FirebaseDatabase.getInstance()
+            .getReference("Users/$userId/Meals/$dateStringYear/$dateStringMonth/$dateStringDay")
         dbRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 var sumCalories = 0.0
@@ -105,7 +115,8 @@ class MenuFragment : Fragment() {
                     override fun onDataChange(bmrSnapshot: DataSnapshot) {
                         val userBmr = bmrSnapshot.value.toString().toDouble()
                         val bmrAfterSubtraction = userBmr - sumCalories
-                        val tvBmrAfterSubtraction = rootView.findViewById<TextView>(R.id.bmrAfterSubtraction)
+                        val tvBmrAfterSubtraction =
+                            rootView.findViewById<TextView>(R.id.bmrAfterSubtraction)
                         tvBmrAfterSubtraction.text = String.format("%.1f", bmrAfterSubtraction)
 
                     }
@@ -126,7 +137,6 @@ class MenuFragment : Fragment() {
             }
 
 
-
             override fun onCancelled(databaseError: DatabaseError) {
                 // obsługa błędów
             }
@@ -137,36 +147,49 @@ class MenuFragment : Fragment() {
 
         return rootView
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val calendar = Calendar.getInstance()
+        val date = calendar.time
+        val dateFormat = SimpleDateFormat("dd.MM.yy", Locale.getDefault())
+        val dateString = dateFormat.format(date)
+
         dayOfWeekTextView = view.findViewById(R.id.DayOfTheWeek)
 
-        val calendar = Calendar.getInstance()
+
         val dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK)
 
         val dayOfWeekText = when (dayOfWeek) {
-            Calendar.SUNDAY -> "Sunday"
-            Calendar.MONDAY -> "Monday"
-            Calendar.TUESDAY -> "Tuesday"
-            Calendar.WEDNESDAY -> "Wednesday"
-            Calendar.THURSDAY -> "Thursday"
-            Calendar.FRIDAY -> "Friday"
-            Calendar.SATURDAY -> "Saturday"
+            Calendar.SUNDAY -> "Sunday \n$dateString"
+            Calendar.MONDAY -> "Monday \n$dateString"
+            Calendar.TUESDAY -> "Tuesday \n$dateString"
+            Calendar.WEDNESDAY -> "Wednesday \n$dateString"
+            Calendar.THURSDAY -> "Thursday \n$dateString"
+            Calendar.FRIDAY -> "Friday \n$dateString"
+            Calendar.SATURDAY -> "Saturday \n$dateString"
             else -> ""
         }
 
         dayOfWeekTextView.text = dayOfWeekText
     }
 
-
-
-
     private fun getProductsData() {
         mealRecyclerView.visibility = View.GONE
         tvLoadingDataMeals.visibility = View.VISIBLE
-
-        dbRef = FirebaseDatabase.getInstance().getReference("Users/$userId/Meals")
+        val calendar = Calendar.getInstance()
+        val date1 = calendar.time
+        val date2 = calendar.time
+        val date3 = calendar.time
+        val dateFormatDay = SimpleDateFormat("dd", Locale.getDefault())
+        val dateFormatYear = SimpleDateFormat("yyyy", Locale.getDefault())
+        val dateFormatMonth = SimpleDateFormat("MM", Locale.getDefault())
+        val dateStringDay = dateFormatDay.format(date1)
+        val dateStringYear = dateFormatYear.format(date2)
+        val dateStringMonth = dateFormatMonth.format(date3)
+        dbRef = FirebaseDatabase.getInstance()
+            .getReference("Users/$userId/Meals/$dateStringYear/$dateStringMonth/$dateStringDay")
 
         dbRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -185,16 +208,15 @@ class MenuFragment : Fragment() {
             override fun onCancelled(error: DatabaseError) {
                 // Handle database error
             }
-
         })
     }
-    private fun bmr(){
+
+    private fun bmr() {
         val dbRefBmr = FirebaseDatabase.getInstance().getReference("Users/$userId/bmr")
         dbRefBmr.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 userBmr = dataSnapshot.value.toString().toDouble()
                 tvBmr.text = userBmr.toString()
-
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
