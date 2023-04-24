@@ -14,6 +14,42 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="LinearLayoutExercise">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginTop">25dp</item>
+    </style>
+
+    <style name="TitleTreningExercises">
+        <item name="android:textColor">@color/Szarawy_ciemny</item>
+        <item name="android:textSize">22pt</item>
+        <item name="android:layout_marginTop">80dp</item>
+        <item name="fontFamily">@font/barlow_semi_condensed_black</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="TextTreningExercises">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/Szarawy_ciemny</item>
+        <item name="android:textSize">10pt</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="fontFamily">@font/barlow_semi_condensed_bold</item>
+    </style>
+
+    <style name="FullScreenDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
+    </style>
+
+
     <style name="TextViewProfileStyle">
         <item name="android:textColor">@color/Szarawy_ciemny</item>
         <item name="android:textSize">30sp</item>

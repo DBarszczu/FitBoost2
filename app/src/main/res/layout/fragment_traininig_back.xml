@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <TextView
+        style="@style/TitleTreningExercises"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp">
+
+        <LinearLayout style="@style/LinearLayoutExercise">
+
+            <Button
+                android:id="@+id/youtube_back_1"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/youtube" />
+
+            <TextView
+                style="@style/TextTreningExercises"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exercise" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayoutExercise">
+
+            <Button
+                android:id="@+id/youtube_back_2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/youtube"
+                android:gravity="center" />
+
+            <TextView
+                style="@style/TextTreningExercises"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Exercise" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayoutExercise">
+
+            <Button
+                android:id="@+id/youtube_back_3"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/youtube"
+
+                />
+
+            <TextView
+                style="@style/TextTreningExercises"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exercies" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayoutExercise">
+
+            <Button
+                android:id="@+id/youtube_back_4"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/youtube" />
+
+            <TextView
+                style="@style/TextTreningExercises"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exercies" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/LinearLayoutExercise">
+
+            <Button
+                android:id="@+id/youtube_back_5"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/youtube" />
+
+            <TextView
+                style="@style/TextTreningExercises"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exercies" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
