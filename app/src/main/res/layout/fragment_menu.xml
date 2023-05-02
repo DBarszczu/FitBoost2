@@ -19,7 +19,7 @@
             android:layout_height="105dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/days_of_the_week"
+            android:background="@drawable/border_fragment_menu"
             android:fontFamily="@font/barlow_semi_condensed_black"
             android:gravity="center"
             android:text="days of the week"
@@ -30,6 +30,7 @@
             />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:background="@drawable/border_fragment_menu"
             android:id="@+id/rvMeals"
             style="@style/CustomRecyclerViewScrollBar"
             android:layout_width="match_parent"

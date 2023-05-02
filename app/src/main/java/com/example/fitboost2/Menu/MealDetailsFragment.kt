@@ -118,7 +118,7 @@ class MealDetailsFragment : Fragment() {
     ) {
         val mDialog = AlertDialog.Builder(requireContext())
         val inflater = layoutInflater
-        val mDialogView = inflater.inflate(R.layout.update_dialog, null)
+        val mDialogView = inflater.inflate(R.layout.update_dialog_product, null)
 
         mDialog.setView(mDialogView)
 

@@ -12,6 +12,7 @@ import com.example.fitboost2.Diet.DietBreakfastFragment
 import com.example.fitboost2.Diet.DietBrunchFragment
 import com.example.fitboost2.Diet.DietDinnerFragment
 import com.example.fitboost2.Diet.DietLunchFragment
+import com.example.fitboost2.Diet.DietSnackFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
@@ -59,6 +60,13 @@ class DietFragment : Fragment() {
         }
         btnLunch.setOnClickListener {
             val fragment = DietLunchFragment()
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.frame_layout, fragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
+        bntAfternoon_Snack.setOnClickListener {
+            val fragment = DietSnackFragment()
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.frame_layout, fragment)
             transaction.addToBackStack(null)

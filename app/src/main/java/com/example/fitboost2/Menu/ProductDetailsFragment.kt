@@ -1,7 +1,6 @@
 package com.example.fitboost2.Menu
 
 import android.app.AlertDialog
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -12,7 +11,6 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.fitboost2.MenuFragment
 import com.example.fitboost2.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -165,7 +163,7 @@ class ProductDetailsFragment : Fragment() {
     ) {
         val mDialog = AlertDialog.Builder(requireContext())
         val inflater = layoutInflater
-        val mDialogView = inflater.inflate(R.layout.update_dialog, null)
+        val mDialogView = inflater.inflate(R.layout.update_dialog_product, null)
 
         mDialog.setView(mDialogView)
 

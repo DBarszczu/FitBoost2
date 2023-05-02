@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.FitBoost2" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#353535</item>
+        <item name="colorPrimary">#FF353535</item>
         <item name="colorPrimaryVariant">#8ED17F</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -65,9 +65,17 @@
 
     <style name="details_description">
         <item name="android:textSize">8pt</item>
-        <item name="fontFamily">@font/barlow_semi_condensed_bold</item>
+        <item name="fontFamily">@font/barlow_semi_condensed_medium</item>
         <item name="android:textStyle">italic</item>
         <item name="color">@color/black</item>
+    </style>
+
+    <style name="Home_text">
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="fontFamily">@font/barlow_semi_condensed_bold</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="details_product">
@@ -76,5 +84,26 @@
         <item name="color">@color/black</item>
 
     </style>
+
+    <style name="CircularProgressBar" parent="@android:style/Widget.ProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/progress_circular</item>
+        <item name="android:progressDrawable">@drawable/progress_circular</item>
+        <item name="android:minWidth">64dp</item>
+        <item name="android:minHeight">64dp</item>
+    </style>
+
+    <style name="Home_Diet_text">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:layout_width">280dp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:textSize">8pt</item>
+        <item name="fontFamily">@font/barlow_semi_condensed_bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+
+
 
 </resources>

@@ -18,7 +18,10 @@
     <color name="Pustynny2">#80E1BA90</color>
     <color name="Szarawy">#818181</color>
     <color name="Szarawy_ciemny">#FF353535</color>
+    <color name="Szarawy_tlo">#535B6F</color>
+    <color name="Szarawy_jasny">#5C5C5C</color>
     <color name="Szarawy_ciemny_transparent">#80FFFFFF</color>
-    <color name="Slonce">#FF9800</color>
+    <color name="NieboJasne">#FF81A4B3</color>
+    <color name="NieboCiemne">#FFD6D6D6</color>
 
 </resources>

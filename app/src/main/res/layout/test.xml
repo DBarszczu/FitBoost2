@@ -7,33 +7,50 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Chest"
-        android:textSize="36sp" />
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:gravity="center"-->
+    <!--                android:orientation="vertical"-->
+    <!--                android:paddingLeft="25dp"-->
+    <!--                android:paddingRight="25dp">-->
 
-    <LinearLayout
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+    <!--                <TextView-->
+    <!--                    style="@style/Home_text"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="This is an enhanced version based on the FireBase RealTime database. The app contains five menu buttons: HOME, TRAINING, MENU, Diet and PROFILE." />-->
 
-        <Button
-            android:id="@+id/youtube_chest_1"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/youtube" />
+    <!--                <TextView-->
+    <!--                    style="@style/Home_text"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="• In the HOME tab you will find a Progress Bar showing how many calories to reach your daily goal." />-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:text="Exercies"
-            android:textSize="20sp" />
+    <!--                <TextView-->
+    <!--                    style="@style/Home_text"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="• In the TRAINING tab, there are exercises divided into eight body parts." />-->
 
-    </LinearLayout>
+    <!--                <TextView-->
+    <!--                    style="@style/Home_text"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="• In the MENU tab you will find the sum of fat, protein and carbohydrates as well as the number of Kcal to reach the goal of the day and a list of products." />-->
 
+    <!--                <TextView-->
+    <!--                    style="@style/Home_text"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="• In the Diet tab there is a nutrition plan assigned to our caloric needs in the form of five meals." />-->
 
+    <!--                <TextView-->
+    <!--                    style="@style/Home_text"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="• In the PROFILES tab, personal data, body measurements, caloric needs calculator, settings and log out will be available." />-->
+    <!--            </LinearLayout>-->
 
 
 
