@@ -57,7 +57,8 @@ class ProductDetailsFragment : Fragment() {
         val addProductBtn = view.findViewById<Button>(R.id.addproducttomeals)
         addProductBtn.setOnClickListener {
             val productId = requireArguments().getString("ProductId").toString()
-            val dbRef = FirebaseDatabase.getInstance().getReference("FitBoost/Products").child(productId)
+            val dbRef =
+                FirebaseDatabase.getInstance().getReference("FitBoost/Products").child(productId)
             dbRef.addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val product = snapshot.getValue(ProductModel::class.java)
@@ -82,20 +83,21 @@ class ProductDetailsFragment : Fragment() {
                             }
 
                             val calendar = Calendar.getInstance()
-                            val date1 = calendar.time
-                            val date2 = calendar.time
-                            val date3 = calendar.time
-                            val dateFormatDay = SimpleDateFormat("dd", Locale.getDefault())
-                            val dateFormatYear = SimpleDateFormat("yyyy", Locale.getDefault())
-                            val dateFormatMonth = SimpleDateFormat("MM", Locale.getDefault())
-                            val dateStringDay = dateFormatDay.format(date1)
-                            val dateStringYear = dateFormatYear.format(date2)
-                            val dateStringMonth = dateFormatMonth.format(date3)
-                            val userMealsRef = FirebaseDatabase.getInstance().getReference("Users/$userId/Meals/$dateStringYear/$dateStringMonth/$dateStringDay")
+                            val year = calendar.get(Calendar.YEAR)
+                            val month = calendar.get(Calendar.MONTH)
+                            val dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH)
+                            val userMealsRef = FirebaseDatabase.getInstance()
+                                .getReference("Users/$userId/Meals/$year/$month/$dayOfMonth")
 
                             modifiedProduct?.let {
-                                modifiedProduct.ProductId?.let { it1 -> userMealsRef.child(it1).setValue(it) } // use the modified product ID here
-                                Toast.makeText(requireContext(), "Product copied to meals", Toast.LENGTH_LONG).show()
+                                modifiedProduct.ProductId?.let { it1 ->
+                                    userMealsRef.child(it1).setValue(it)
+                                } // use the modified product ID here
+                                Toast.makeText(
+                                    requireContext(),
+                                    "Product copied to meals",
+                                    Toast.LENGTH_LONG
+                                ).show()
                             }
                         }
                         setNegativeButton("Cancel") { dialog, _ -> dialog.cancel() }
@@ -106,7 +108,8 @@ class ProductDetailsFragment : Fragment() {
                 }
 
                 override fun onCancelled(error: DatabaseError) {
-                    Toast.makeText(requireContext(), "Error: ${error.message}", Toast.LENGTH_LONG).show()
+                    Toast.makeText(requireContext(), "Error: ${error.message}", Toast.LENGTH_LONG)
+                        .show()
                 }
             })
         }
@@ -140,7 +143,7 @@ class ProductDetailsFragment : Fragment() {
 
     private fun deleteRecord(
         id: String
-    ){
+    ) {
         val dbRef = FirebaseDatabase.getInstance().getReference("FitBoost/Products").child(id)
         val mTask = dbRef.removeValue()
         mTask.addOnSuccessListener {
@@ -151,8 +154,9 @@ class ProductDetailsFragment : Fragment() {
             transaction.replace(R.id.frame_layout, fragment)
             transaction.addToBackStack(null)
             transaction.commit()
-        }.addOnFailureListener{ error ->
-            Toast.makeText(requireContext(), "Deleting Err ${error.message}", Toast.LENGTH_LONG).show()
+        }.addOnFailureListener { error ->
+            Toast.makeText(requireContext(), "Deleting Err ${error.message}", Toast.LENGTH_LONG)
+                .show()
         }
     }
 
@@ -176,7 +180,9 @@ class ProductDetailsFragment : Fragment() {
         val btnUpdateData = mDialogView.findViewById<Button>(R.id.btnUpdateData)
 
         etProductName.setText(arguments?.getString("ProductName").toString())
-        etProductCalories.setText(arguments?.getString("ProductCalories", 0.0.toString()).toString())
+        etProductCalories.setText(
+            arguments?.getString("ProductCalories", 0.0.toString()).toString()
+        )
         etProductFat.setText(arguments?.getString("ProductFat", 0.0.toString()).toString())
         etProductProtein.setText(arguments?.getString("ProductProtein", 0.0.toString()).toString())
         etProductCarbs.setText(arguments?.getString("ProductCarbs", 0.0.toString()).toString())
@@ -219,7 +225,7 @@ class ProductDetailsFragment : Fragment() {
         carbs: Double
     ) {
         val dbRef = FirebaseDatabase.getInstance().getReference("FitBoost/Products").child(id)
-        val empInfo = ProductModel(id, name, calories, fat,protein,carbs)
+        val empInfo = ProductModel(id, name, calories, fat, protein, carbs)
         dbRef.setValue(empInfo)
     }
 

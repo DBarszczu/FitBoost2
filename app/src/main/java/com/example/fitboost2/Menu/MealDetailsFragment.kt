@@ -60,20 +60,15 @@ class MealDetailsFragment : Fragment() {
 
     private fun deleteRecord(
         id: String
-    ){
+    ) {
 
 
         val calendar = Calendar.getInstance()
-        val date1 = calendar.time
-        val date2 = calendar.time
-        val date3 = calendar.time
-        val dateFormatDay = SimpleDateFormat("dd", Locale.getDefault())
-        val dateFormatYear = SimpleDateFormat("yyyy", Locale.getDefault())
-        val dateFormatMonth = SimpleDateFormat("MM", Locale.getDefault())
-        val dateStringDay = dateFormatDay.format(date1)
-        val dateStringYear = dateFormatYear.format(date2)
-        val dateStringMonth = dateFormatMonth.format(date3)
-        val dbRef = FirebaseDatabase.getInstance().getReference("Users/$userId/Meals/$dateStringYear/$dateStringMonth/$dateStringDay").child(id)
+        val year = calendar.get(Calendar.YEAR)
+        val month = calendar.get(Calendar.MONTH)
+        val dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH)
+        val dbRef = FirebaseDatabase.getInstance()
+            .getReference("Users/$userId/Meals/$year/$month/$dayOfMonth").child(id)
         val mTask = dbRef.removeValue()
         mTask.addOnSuccessListener {
             Toast.makeText(requireContext(), "Product data deleted", Toast.LENGTH_LONG).show()
@@ -83,8 +78,9 @@ class MealDetailsFragment : Fragment() {
             transaction.replace(R.id.frame_layout, fragment)
             transaction.addToBackStack(null)
             transaction.commit()
-        }.addOnFailureListener{ error ->
-            Toast.makeText(requireContext(), "Deleting Err ${error.message}", Toast.LENGTH_LONG).show()
+        }.addOnFailureListener { error ->
+            Toast.makeText(requireContext(), "Deleting Err ${error.message}", Toast.LENGTH_LONG)
+                .show()
         }
     }
 
@@ -103,13 +99,15 @@ class MealDetailsFragment : Fragment() {
 
     private fun setValuesToViews() {
         tvProductName.text = requireArguments().getString("ProductName")
-        tvProductCalories.text = String.format("%.1f", requireArguments().getString("ProductCalories")?.toFloat())
-        tvProductFat.text = String.format("%.1f", requireArguments().getString("ProductFat")?.toFloat())
-        tvProductProtein.text = String.format("%.1f", requireArguments().getString("ProductProtein")?.toFloat())
-        tvProductCarbs.text = String.format("%.1f", requireArguments().getString("ProductCarbs")?.toFloat())
+        tvProductCalories.text =
+            String.format("%.1f", requireArguments().getString("ProductCalories")?.toFloat())
+        tvProductFat.text =
+            String.format("%.1f", requireArguments().getString("ProductFat")?.toFloat())
+        tvProductProtein.text =
+            String.format("%.1f", requireArguments().getString("ProductProtein")?.toFloat())
+        tvProductCarbs.text =
+            String.format("%.1f", requireArguments().getString("ProductCarbs")?.toFloat())
     }
-
-
 
 
     private fun openUpdateDialog(
@@ -132,7 +130,9 @@ class MealDetailsFragment : Fragment() {
         val btnUpdateData = mDialogView.findViewById<Button>(R.id.btnUpdateData)
 
         etProductName.setText(arguments?.getString("ProductName").toString())
-        etProductCalories.setText(arguments?.getString("ProductCalories", 0.0.toString()).toString())
+        etProductCalories.setText(
+            arguments?.getString("ProductCalories", 0.0.toString()).toString()
+        )
         etProductFat.setText(arguments?.getString("ProductFat", 0.0.toString()).toString())
         etProductProtein.setText(arguments?.getString("ProductProtein", 0.0.toString()).toString())
         etProductCarbs.setText(arguments?.getString("ProductCarbs", 0.0.toString()).toString())
@@ -179,16 +179,11 @@ class MealDetailsFragment : Fragment() {
     ) {
 
         val calendar = Calendar.getInstance()
-        val date1 = calendar.time
-        val date2 = calendar.time
-        val date3 = calendar.time
-        val dateFormatDay = SimpleDateFormat("dd", Locale.getDefault())
-        val dateFormatYear = SimpleDateFormat("yyyy", Locale.getDefault())
-        val dateFormatMonth = SimpleDateFormat("MM", Locale.getDefault())
-        val dateStringDay = dateFormatDay.format(date1)
-        val dateStringYear = dateFormatYear.format(date2)
-        val dateStringMonth = dateFormatMonth.format(date3)
-        val dbRef = FirebaseDatabase.getInstance().getReference("Users/$userId/Meals/$dateStringYear/$dateStringMonth/$dateStringDay").child(id)
+        val year = calendar.get(Calendar.YEAR)
+        val month = calendar.get(Calendar.MONTH)
+        val dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH)
+        val dbRef = FirebaseDatabase.getInstance()
+            .getReference("Users/$userId/Meals/$year/$month/$dayOfMonth").child(id)
         val empInfo = ProductModel(id, name, calories, fat, protein, carbs)
         dbRef.setValue(empInfo)
     }
