@@ -1,5 +1,6 @@
 package com.example.fitboost2.Profile
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -15,12 +16,14 @@ import com.example.fitboost2.R
 class SettingsFragment : Fragment() {
 
     companion object {
-        private const val THEME_PREFS = "theme_prefs"
-        private const val THEME_KEY = "theme_key"
+        const val THEME_PREFS = "theme_prefs"
+        const val THEME_KEY = "theme_key"
     }
 
     private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var themeSwitch: Switch
 
+    @SuppressLint("UseSwitchCompatOrMaterialCode")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -32,8 +35,7 @@ class SettingsFragment : Fragment() {
         sharedPreferences = requireActivity().getSharedPreferences(THEME_PREFS, Context.MODE_PRIVATE)
 
         // Znajdź element Switch i przycisk resetowania motywu
-        val themeSwitch = view.findViewById<Switch>(R.id.theme_switch)
-
+        themeSwitch = view.findViewById<Switch>(R.id.theme_switch)
 
         // Ustaw stan przełącznika na podstawie zapisanej wartości w SharedPreferences
         val isDarkTheme = sharedPreferences.getBoolean(THEME_KEY, false)
@@ -41,22 +43,37 @@ class SettingsFragment : Fragment() {
 
         // Dodaj nasłuchiwacz zmiany stanu przełącznika
         themeSwitch.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                // Zmień motyw na ciemny
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                // Zapisz wartość motywu w SharedPreferences
-                sharedPreferences.edit().putBoolean(THEME_KEY, true).apply()
-            } else {
-                // Zmień motyw na domyślny
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
-                // Zapisz wartość motywu w SharedPreferences
-                sharedPreferences.edit().putBoolean(THEME_KEY, false).apply()
-            }
+            setDarkModeEnabled(isChecked)
         }
 
-        // Dodaj nasłuchiwacz kliknięcia przycisku resetowania motywu
-
-
         return view
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Wczytaj stan ciemnego motywu z SharedPreferences
+        val isDarkTheme = sharedPreferences.getBoolean(THEME_KEY, false)
+        // Ustaw stan przełącznika na podstawie wczytanej wartości
+        themeSwitch.isChecked = isDarkTheme
+        // Ustaw tryb ciemnego motywu na podstawie wczytanej wartości
+        setDarkModeEnabled(isDarkTheme)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        // Zapisz stan ciemnego motywu w SharedPreferences
+        setDarkModeEnabled(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES)
+    }
+
+    private fun setDarkModeEnabled(isEnabled: Boolean) {
+        if (isEnabled) {
+            // Włącz ciemny motyw
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        } else {
+            // Wyłącz ciemny motyw
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+        }
+        // Zapisz stan motywu w SharedPreferences
+        sharedPreferences.edit().putBoolean(THEME_KEY, isEnabled).apply()
     }
 }

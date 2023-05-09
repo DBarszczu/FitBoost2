@@ -2,16 +2,160 @@
     <!-- Base application theme. -->
     <style name="Theme.FitBoost2" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimary">@color/Szarawy_ciemny</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
 
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondary">@color/NieboJasne</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnSecondary">@color/Pustynny2</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+    <style name="TextViewProfileStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="textcolorGrayToWhite">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:buttonTint">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textColorLink">@color/white</item>
+    </style>
+    <style name="textcolorGrayToWhiteMale">
+        <item name="android:drawableRight">@drawable/baseline_male_24_night</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:buttonTint">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textColorLink">@color/white</item>
+    </style>
+    <style name="textcolorGrayToWhiteFemale">
+        <item name="android:drawableRight">@drawable/baseline_female_24_night</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:buttonTint">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textColorLink">@color/white</item>
+    </style>
+    <style name="textcolorWhiteToWhite">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:indeterminateTint">@color/white</item>
+    </style>
+
+    <style name="buttontextcolor">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TitleTreningExercises">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">22pt</item>
+        <item name="android:layout_marginTop">80dp</item>
+        <item name="fontFamily">@font/barlow_semi_condensed_black</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="TextTreningExercises">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">10pt</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="fontFamily">@font/barlow_semi_condensed_bold</item>
+    </style>
+
+    <style name="background_list_item">
+        <item name="backgroundColor">@color/Szarawy_ciemny</item>
+    </style>
+    <style name="CustomRecyclerViewScrollBar">
+        <item name="android:thumb">@drawable/custom_scrollbar_thumb</item>
+        <item name="background">@drawable/border_list_diet_night</item>
+    </style>
+    <style name="PersonalDataEdit">
+        <item name="android:drawableEnd">@drawable/baseline_edit_24_night</item>
+    </style>
+    <style name="PersonalDataEditDialog">
+        <item name="android:drawableLeft">@drawable/baseline_edit_24_night</item>
+    </style>
+    <style name="DietBackIcon">
+        <item name="android:drawableRight">@drawable/baseline_arrow_back_ios_50</item>
+    </style>
+    <style name="DietForwardIcon">
+        <item name="android:drawableRight">@drawable/baseline_arrow_forward_ios_50</item>
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style name="ProfileFragmentPersonalData">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:drawableLeft">@drawable/baseline_person_4_30_night</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ProfileFragmentSummary">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:drawableLeft">@drawable/baseline_calculate_30_night</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ProfileFragmentBodyMeasurements">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:drawableLeft">@drawable/baseline_calculate_30_night</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ProfileFragmentCalculator">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:drawableLeft">@drawable/baseline_calculate_30_night</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ProfileFragmentSettings">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:drawableLeft">@drawable/baseline_settings_30_night</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ProfileFragmentLogout">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:drawableLeft">@drawable/baseline_logout_30_night</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 </resources>

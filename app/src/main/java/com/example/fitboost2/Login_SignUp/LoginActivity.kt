@@ -1,10 +1,13 @@
 package com.example.fitboost2.Login_SignUp
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.fitboost2.MainActivity
+import com.example.fitboost2.Profile.SettingsFragment
 import com.example.fitboost2.R
 import com.example.fitboost2.databinding.ActivityLoginBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -20,6 +23,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var googleSignInClient: GoogleSignInClient
     private val RC_SIGN_IN = 9000
+    private val sharedPreferences by lazy { getSharedPreferences(SettingsFragment.THEME_PREFS, Context.MODE_PRIVATE) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -93,5 +97,21 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Authentication Failed.", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+    override fun onResume() {
+        super.onResume()
+        val isDarkTheme = sharedPreferences.getBoolean(SettingsFragment.THEME_KEY, false)
+        setDarkModeEnabled(isDarkTheme)
+    }
+    private fun setDarkModeEnabled(isEnabled: Boolean) {
+        if (isEnabled) {
+            // Włącz ciemny motyw
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        } else {
+            // Wyłącz ciemny motyw
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+        }
+        // Zapisz stan motywu w SharedPreferences
+        sharedPreferences.edit().putBoolean(SettingsFragment.THEME_KEY, isEnabled).apply()
     }
 }

@@ -40,6 +40,7 @@ class HomeFragment : Fragment() {
     private lateinit var HomeSnack: TextView
     private lateinit var HomeDinner: TextView
     private lateinit var progressBarLoading: ProgressBar
+    private var currentDate = Calendar.getInstance()
 
 
     @SuppressLint("MissingInflatedId")
@@ -120,18 +121,12 @@ class HomeFragment : Fragment() {
         progressBar.visibility = View.GONE
         progressBarLoading.visibility = View.VISIBLE
 
-        val calendar = Calendar.getInstance()
-        val date1 = calendar.time
-        val date2 = calendar.time
-        val date3 = calendar.time
-        val dateFormatDay = SimpleDateFormat("dd", Locale.getDefault())
-        val dateFormatYear = SimpleDateFormat("yyyy", Locale.getDefault())
-        val dateFormatMonth = SimpleDateFormat("MM", Locale.getDefault())
-        val dateStringDay = dateFormatDay.format(date1)
-        val dateStringYear = dateFormatYear.format(date2)
-        val dateStringMonth = dateFormatMonth.format(date3)
+        val year = currentDate.get(Calendar.YEAR)
+        val month = currentDate.get(Calendar.MONTH)
+        val dayOfMonth = currentDate.get(Calendar.DAY_OF_MONTH)
+
         val dbRef = FirebaseDatabase.getInstance()
-            .getReference("Users/$userId/Meals/$dateStringYear/$dateStringMonth/$dateStringDay")
+            .getReference("Users/$userId/Meals/$year/$month/$dayOfMonth")
         dbRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
 
@@ -152,9 +147,11 @@ class HomeFragment : Fragment() {
                     override fun onDataChange(bmrSnapshot: DataSnapshot) {
                         userBmr = bmrSnapshot.value.toString().toDouble()
                         val bmrAfterSubtraction = userBmr - sumCalories
-                        val tvBmrAfterSubtraction = rootView.findViewById<TextView>(R.id.bmrAfterSubtraction)
-                            val bmrLeftString = String.format("<b>%.1f</b><br> calories left</br>", bmrAfterSubtraction)
-                            tvBmrAfterSubtraction.text = Html.fromHtml(bmrLeftString)
+                        val tvBmrAfterSubtraction =
+                            rootView.findViewById<TextView>(R.id.bmrAfterSubtraction)
+                        val bmrLeftString =
+                            String.format("<b>%.1f</b><br> calories left</br>", bmrAfterSubtraction)
+                        tvBmrAfterSubtraction.text = Html.fromHtml(bmrLeftString)
 
                         progressBar.max = userBmr.toInt()
                         progressBar.progress = sumCalories.toInt()
@@ -166,7 +163,6 @@ class HomeFragment : Fragment() {
                         // obsługa błędów
                     }
                 })
-
 
 
             }

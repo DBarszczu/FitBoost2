@@ -20,7 +20,7 @@
         android:id="@+id/surnameEditText"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/baseline_edit_24"
+        style="@style/PersonalDataEditDialog"
         android:drawablePadding="10dp"
         android:hint="Enter your surname" />
 

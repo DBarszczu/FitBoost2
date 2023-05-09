@@ -16,32 +16,32 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
             android:gravity="center"
-            android:layout_marginTop="50dp">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/goDinnerFormBreakfast"
+                style="@style/DietBackIcon"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:drawableLeft="@drawable/baseline_arrow_circle_left_36"
-                android:layout_marginRight="5dp"/>
+                android:layout_marginRight="5dp" />
 
             <TextView
+                style="@style/textcolorGrayToWhite"
                 android:layout_width="235dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/barlow_semi_condensed_black"
                 android:text="Breakfast"
                 android:textAlignment="center"
-                android:textColor="@color/Szarawy_ciemny"
                 android:textSize="20pt" />
 
             <TextView
                 android:id="@+id/goBrunchFromBreakfast"
+                style="@style/DietForwardIcon"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="5dp"
-                android:drawableRight="@drawable/baseline_arrow_circle_right_36"/>
+                android:layout_marginLeft="5dp" />
         </LinearLayout>
 
         <TextView
@@ -58,9 +58,9 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="490dp"
-            android:background="@drawable/border_list_diet"
+            android:background="@drawable/border_fragment_menu"
             android:orientation="vertical"
-            android:padding="2dp">
+            android:padding="10dp">
 
 
             <ScrollView
@@ -77,7 +77,7 @@
                     android:padding="10dp"
                     android:text=""
                     android:textAlignment="viewStart"
-                    android:textColor="@color/Szarawy_ciemny"
+                    android:textColor="@color/white"
                     android:textSize="20sp" />
 
 

@@ -4,18 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-   >
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/PersonalDataTitle"
+        style="@style/textcolorGrayToWhite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/barlow_semi_condensed_black"
         android:text="Personal Data"
-        android:textColor="@color/Szarawy_ciemny"
         android:textSize="32sp" />
 
     <LinearLayout
@@ -32,30 +31,30 @@
 
             <TextView
                 android:id="@+id/txtNamePersonalData"
+                style="@style/textcolorGrayToWhite"
                 android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/barlow_semi_condensed_bold"
                 android:gravity="center|end"
                 android:text="Name: "
-                android:textColor="@color/Szarawy_ciemny"
                 android:textSize="15sp"
                 android:textStyle="italic" />
 
             <TextView
                 android:id="@+id/txtNamePersonalDataUser"
+                style="@style/textcolorGrayToWhite"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/barlow_semi_condensed_bold"
                 android:paddingLeft="20dp"
                 android:text=""
-                android:textColor="@color/Szarawy_ciemny"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/ChangeName"
+                style="@style/PersonalDataEdit"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:drawableEnd="@drawable/baseline_edit_24"
                 android:drawablePadding="10dp" />
 
         </LinearLayout>
@@ -67,33 +66,32 @@
 
             <TextView
                 android:id="@+id/txtSuramePersonalData"
+                style="@style/textcolorGrayToWhite"
                 android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/barlow_semi_condensed_bold"
                 android:gravity="center|end"
                 android:text="Surname: "
-                android:textColor="@color/Szarawy_ciemny"
                 android:textSize="15sp"
                 android:textStyle="italic" />
 
             <TextView
                 android:id="@+id/txtSurnamePersonalDataUser"
+                style="@style/textcolorGrayToWhite"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/barlow_semi_condensed_bold"
                 android:paddingLeft="20dp"
                 android:text=""
-                android:textColor="@color/Szarawy_ciemny"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/ChangeSurname"
+                style="@style/PersonalDataEdit"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:drawableEnd="@drawable/baseline_edit_24"
                 android:drawablePadding="10dp"
-                android:fontFamily="@font/barlow_semi_condensed_bold"
-                android:textColor="@color/Szarawy_ciemny" />
+                android:fontFamily="@font/barlow_semi_condensed_bold" />
 
         </LinearLayout>
 
@@ -104,33 +102,32 @@
 
             <TextView
                 android:id="@+id/txtEmailPersonalData"
+                style="@style/textcolorGrayToWhite"
                 android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/barlow_semi_condensed_bold"
                 android:gravity="center|end"
                 android:text="Email: "
-                android:textColor="@color/Szarawy_ciemny"
                 android:textSize="15sp"
                 android:textStyle="italic" />
 
             <TextView
                 android:id="@+id/txtEmailPersonalDataUser"
+                style="@style/textcolorGrayToWhite"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/barlow_semi_condensed_bold"
                 android:paddingLeft="20dp"
                 android:text=""
-                android:textColor="@color/Szarawy_ciemny"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/ChangeEmail"
+                style="@style/PersonalDataEdit"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:drawableEnd="@drawable/baseline_edit_24"
                 android:drawablePadding="10dp"
-                android:fontFamily="@font/barlow_semi_condensed_bold"
-                android:textColor="@color/Szarawy_ciemny" />
+                android:fontFamily="@font/barlow_semi_condensed_bold" />
 
         </LinearLayout>
 
@@ -141,34 +138,33 @@
 
             <TextView
                 android:id="@+id/txtPasswordPersonalData"
+                style="@style/textcolorGrayToWhite"
                 android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/barlow_semi_condensed_bold"
                 android:gravity="center|end"
                 android:text="Password: "
-                android:textColor="@color/Szarawy_ciemny"
                 android:textSize="15sp"
                 android:textStyle="italic" />
 
             <TextView
                 android:id="@+id/txtPasswordPersonalDataUser"
+                style="@style/textcolorGrayToWhite"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/barlow_semi_condensed_bold"
                 android:inputType="textPassword"
                 android:paddingLeft="20dp"
                 android:text="Password"
-                android:textColor="@color/Szarawy_ciemny"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/ChangePassword"
+                style="@style/PersonalDataEdit"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:drawableEnd="@drawable/baseline_edit_24"
                 android:drawablePadding="10dp"
-                android:fontFamily="@font/barlow_semi_condensed_bold"
-                android:textColor="@color/Szarawy_ciemny" />
+                android:fontFamily="@font/barlow_semi_condensed_bold" />
 
         </LinearLayout>
 

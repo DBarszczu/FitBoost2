@@ -22,10 +22,9 @@
 
             <TextView
                 android:id="@+id/bntpersolandataProfile"
-                style="@style/TextViewProfileStyle"
+                style="@style/ProfileFragmentPersonalData"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/baseline_person_4_30"
                 android:text="Personal data" />
             <View
                 android:layout_width="match_parent"
@@ -34,10 +33,9 @@
 
             <TextView
                 android:id="@+id/bntsummaryProfile"
-                style="@style/TextViewProfileStyle"
+                style="@style/ProfileFragmentSummary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/baseline_summarize_30"
                 android:text="Summary" />
             <View
                 android:layout_width="match_parent"
@@ -46,10 +44,9 @@
 
             <TextView
                 android:id="@+id/bntbodymeasurementsProfile"
-                style="@style/TextViewProfileStyle"
+                style="@style/ProfileFragmentBodyMeasurements"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/baseline_monitor_weight_30"
                 android:text="Body measurements" />
             <View
                 android:layout_width="match_parent"
@@ -58,10 +55,9 @@
 
             <TextView
                 android:id="@+id/bntcalculatorProfile"
-                style="@style/TextViewProfileStyle"
+                style="@style/ProfileFragmentCalculator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/baseline_calculate_30"
                 android:text="Calculator" />
             <View
                 android:layout_width="match_parent"
@@ -70,10 +66,9 @@
 
             <TextView
                 android:id="@+id/bntsettingsProfile"
-                style="@style/TextViewProfileStyle"
+                style="@style/ProfileFragmentSettings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/baseline_settings_30"
                 android:text="Settings" />
             <View
                 android:layout_width="match_parent"
@@ -82,11 +77,10 @@
 
             <TextView
                 android:id="@+id/bntlogoutProfile"
-                style="@style/TextViewProfileStyle"
+                style="@style/ProfileFragmentLogout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="0dp"
-                android:drawableLeft="@drawable/baseline_logout_30"
                 android:text="Log out" />
 
 
@@ -96,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:text=""
-                android:textColor="@color/Szarawy_ciemny"
+                style="@style/textcolorGrayToWhite"
                 android:textStyle="bold" />
             <View
                 android:layout_width="match_parent"

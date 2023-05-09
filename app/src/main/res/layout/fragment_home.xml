@@ -25,7 +25,7 @@
                 android:fontFamily="@font/barlow_semi_condensed_black"
                 android:gravity="left"
                 android:text="Monday"
-                android:textColor="@color/Szarawy_ciemny"
+                android:textColor="@color/NieboJasne"
                 android:textSize="15pt"
 
                 />
@@ -158,11 +158,13 @@
                         android:orientation="horizontal"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp">
+
                         <TextView
                             android:layout_width="40dp"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="5dp"
-                            android:drawableRight="@drawable/baseline_fastfood_24"/>
+                            android:drawableRight="@drawable/baseline_fastfood_24" />
+
                         <TextView
 
                             style="@style/Home_Diet_text"
@@ -175,6 +177,7 @@
                             android:drawableRight="@drawable/baseline_add_24" />
                     </LinearLayout>
 
+      
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -182,11 +185,13 @@
                         android:orientation="horizontal"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp">
+
                         <TextView
                             android:layout_width="40dp"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="5dp"
-                            android:drawableRight="@drawable/baseline_list_24_white"/>
+                            android:drawableRight="@drawable/baseline_list_24_white" />
+
                         <TextView
 
                             style="@style/Home_Diet_text"
@@ -244,14 +249,17 @@
                         android:orientation="horizontal"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp">
+
                         <TextView
                             android:layout_width="40dp"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="5dp"
                             android:drawableTop="@drawable/coffee_25" />
+
                         <TextView
                             style="@style/Home_Diet_text"
                             android:text="Breakfast" />
+
                         <TextView
                             android:id="@+id/HomeBreakfast"
                             android:layout_width="wrap_content"
@@ -318,15 +326,16 @@
                         android:orientation="horizontal"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp">
+
                         <TextView
                             android:layout_width="40dp"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="5dp"
-                            android:drawableTop="@drawable/apple20"  />
+                            android:drawableTop="@drawable/apple20" />
+
                         <TextView
                             style="@style/Home_Diet_text"
-                            android:text="Snack"
-                           />
+                            android:text="Snack" />
 
                         <TextView
                             android:id="@+id/HomeSnack"
@@ -342,11 +351,13 @@
                         android:orientation="horizontal"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp">
+
                         <TextView
                             android:layout_width="40dp"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="5dp"
-                            android:drawableRight="@drawable/food_35"/>
+                            android:drawableRight="@drawable/food_35" />
+
                         <TextView
                             style="@style/Home_Diet_text"
                             android:text="Dinner" />

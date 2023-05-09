@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Meal details"
-            android:textColor="@color/Szarawy_ciemny"
+            style="@style/textcolorGrayToWhite"
             android:textSize="18pt"
             android:textAlignment="center"
             android:fontFamily="@font/barlow_semi_condensed_black"/>
@@ -42,7 +42,7 @@
                     android:fontFamily="@font/barlow_semi_condensed_medium"
                     android:gravity="right"
                     android:text="Name: "
-                    android:textColor="@color/Szarawy_ciemny"
+                    style="@style/textcolorGrayToWhite"
                     android:textSize="20sp"
                     android:textStyle="italic"/>
 
@@ -53,7 +53,7 @@
                     android:layout_marginLeft="30dp"
                     android:fontFamily="@font/barlow_semi_condensed_bold"
                     android:text=""
-                    android:textColor="@color/Szarawy_ciemny"
+                    style="@style/textcolorGrayToWhite"
                     android:textSize="20sp"
 
                     />
@@ -73,7 +73,7 @@
                     android:fontFamily="@font/barlow_semi_condensed_medium"
                     android:gravity="right"
                     android:text="Kcal:"
-                    android:textColor="@color/Szarawy_ciemny"
+                    style="@style/textcolorGrayToWhite"
                     android:textSize="20sp"
                     android:textStyle="italic"  />
 
@@ -84,7 +84,7 @@
                     android:layout_marginLeft="30dp"
                     android:fontFamily="@font/barlow_semi_condensed_bold"
                     android:text=""
-                    android:textColor="@color/Szarawy_ciemny"
+                    style="@style/textcolorGrayToWhite"
                     android:textSize="20sp" />
 
 
@@ -103,7 +103,7 @@
                     android:fontFamily="@font/barlow_semi_condensed_medium"
                     android:gravity="right"
                     android:text="Fat: "
-                    android:textColor="@color/Szarawy_ciemny"
+                    style="@style/textcolorGrayToWhite"
                     android:textSize="20sp"
                     android:textStyle="italic" />
 
@@ -114,7 +114,7 @@
                     android:layout_marginLeft="30dp"
                     android:fontFamily="@font/barlow_semi_condensed_bold"
                     android:text=""
-                    android:textColor="@color/Szarawy_ciemny"
+                    style="@style/textcolorGrayToWhite"
                     android:textSize="20sp"
                     />
 
@@ -133,7 +133,7 @@
                     android:fontFamily="@font/barlow_semi_condensed_medium"
                     android:gravity="right"
                     android:text="Protein: "
-                    android:textColor="@color/Szarawy_ciemny"
+                    style="@style/textcolorGrayToWhite"
                     android:textSize="20sp"
                     android:textStyle="italic" />
 
@@ -145,7 +145,7 @@
                     android:layout_marginLeft="30dp"
                     android:fontFamily="@font/barlow_semi_condensed_bold"
                     android:text=""
-                    android:textColor="@color/Szarawy_ciemny"
+                    style="@style/textcolorGrayToWhite"
                     android:textSize="20sp" />
 
             </LinearLayout>
@@ -162,7 +162,7 @@
                     android:fontFamily="@font/barlow_semi_condensed_medium"
                     android:gravity="right"
                     android:text="Carbs: "
-                    android:textColor="@color/Szarawy_ciemny"
+                    style="@style/textcolorGrayToWhite"
                     android:textSize="20sp"
                     android:textStyle="italic" />
 
@@ -173,7 +173,7 @@
                     android:layout_marginLeft="30dp"
                     android:fontFamily="@font/barlow_semi_condensed_bold"
                     android:text=""
-                    android:textColor="@color/Szarawy_ciemny"
+                    style="@style/textcolorGrayToWhite"
                     android:textSize="20sp"  />
 
 

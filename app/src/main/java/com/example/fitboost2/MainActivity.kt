@@ -1,15 +1,17 @@
 package com.example.fitboost2
 
-
-
 import androidx.appcompat.app.AppCompatActivity
+import android.content.Context
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
+import com.example.fitboost2.Profile.SettingsFragment
 import com.example.fitboost2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -24,9 +26,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.diet -> replaceFragment(DietFragment())
                 R.id.profile -> replaceFragment(ProfileFragment())
 
-                else -> {
-
-                }
+                else -> {}
             }
             true
         }

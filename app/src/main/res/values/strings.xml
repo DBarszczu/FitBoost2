@@ -12,7 +12,6 @@
         <item>Extra active</item>
     </string-array>
 
-    <string name="theme_switch_label">Ciemny motyw</string>
-    <string name="reset_theme_button_label">Resetuj motyw</string>
+    <string name="theme_switch_label">Dark mode</string>
 
 </resources>

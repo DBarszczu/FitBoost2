@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="35dp"
-    android:paddingRight="35dp">
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp">
 
 
     <LinearLayout
@@ -15,13 +15,13 @@
         android:orientation="vertical">
 
         <TextView
+            style="@style/textcolorGrayToWhite"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="50dp"
             android:fontFamily="@font/barlow_semi_condensed_black"
             android:text="Nutrition plan"
             android:textAlignment="center"
-            android:textColor="@color/Szarawy_ciemny"
             android:textSize="20pt" />
 
         <LinearLayout
@@ -33,21 +33,21 @@
 
             <TextView
                 android:id="@+id/bmr"
+                style="@style/textcolorGrayToWhite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/barlow_semi_condensed_black"
                 android:padding="10dp"
                 android:text="Food plan for bmr of: "
-                android:textColor="@color/Szarawy_ciemny"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/bmrTextView"
+                style="@style/textcolorGrayToWhite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/barlow_semi_condensed_black"
                 android:text=""
-                android:textColor="@color/Szarawy_ciemny"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -62,53 +62,58 @@
 
             <Button
                 android:id="@+id/bntBreakfast"
-                android:layout_width="250dp"
-                android:layout_height="80dp"
-                android:layout_marginBottom="15dp"
+                style="@style/buttontextcolor"
+                android:layout_width="350dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="5dp"
                 android:fontFamily="@font/barlow_semi_condensed_black"
                 android:text="Breakfast"
-                android:textSize="22sp"
-                app:cornerRadius="8dp" />
+                android:textSize="26sp"
+                app:cornerRadius="10dp" />
 
             <Button
                 android:id="@+id/bntBrunch"
-                android:layout_width="250dp"
-                android:layout_height="80dp"
-                android:layout_marginBottom="15dp"
+                style="@style/buttontextcolor"
+                android:layout_width="350dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="5dp"
                 android:fontFamily="@font/barlow_semi_condensed_black"
                 android:text="Brunch"
-                android:textSize="22sp"
-                app:cornerRadius="8dp" />
+                android:textSize="26sp"
+                app:cornerRadius="10dp" />
 
 
             <Button
                 android:id="@+id/bntLunch"
-                android:layout_width="250dp"
-                android:layout_height="80dp"
-                android:layout_marginBottom="15dp"
+                style="@style/buttontextcolor"
+                android:layout_width="350dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="5dp"
                 android:fontFamily="@font/barlow_semi_condensed_black"
                 android:text="Lunch"
-                android:textSize="22sp"
-                app:cornerRadius="8dp" />
+                android:textSize="26sp"
+                app:cornerRadius="10dp" />
 
             <Button
                 android:id="@+id/bntAfternoon_Snack"
-                android:layout_width="250dp"
-                android:layout_height="80dp"
-                android:layout_marginBottom="15dp"
+                style="@style/buttontextcolor"
+                android:layout_width="350dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="5dp"
                 android:fontFamily="@font/barlow_semi_condensed_black"
                 android:text="Snack"
-                android:textSize="22sp"
-                app:cornerRadius="8dp" />
+                android:textSize="26sp"
+                app:cornerRadius="10dp" />
 
             <Button
                 android:id="@+id/bntDinner"
-                android:layout_width="250dp"
-                android:layout_height="80dp"
+                style="@style/buttontextcolor"
+                android:layout_width="350dp"
+                android:layout_height="90dp"
                 android:fontFamily="@font/barlow_semi_condensed_black"
                 android:text="Dinner"
-                android:textSize="22sp"
-                app:cornerRadius="8dp" />
+                android:textSize="26sp"
+                app:cornerRadius="10dp" />
 
         </LinearLayout>
 

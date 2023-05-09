@@ -9,20 +9,21 @@
 
     <TextView
         android:id="@+id/addProductInsertion"
-        android:layout_marginTop="50dp"
+        style="@style/textcolorGrayToWhite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add product"
-        android:textColor="@color/Szarawy_ciemny"
-        android:textSize="18pt"
-        android:textAlignment="center"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/barlow_semi_condensed_black"
+        android:text="Add product"
+        android:textAlignment="center"
+        android:textSize="18pt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/etProductName"
+        style="@style/textcolorGrayToWhite"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -30,8 +31,6 @@
         android:fontFamily="@font/barlow_semi_condensed_medium"
         android:hint="Product Name"
         android:inputType="text"
-        android:textColor="@color/Szarawy_ciemny"
-        android:textColorHint="@color/Szarawy_ciemny"
         android:paddingLeft="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,6 +38,7 @@
 
     <EditText
         android:id="@+id/etProductCalories"
+        style="@style/textcolorGrayToWhite"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -46,9 +46,7 @@
         android:fontFamily="@font/barlow_semi_condensed_medium"
         android:hint="Calories"
         android:inputType="number"
-        android:textColor="@color/Szarawy_ciemny"
         android:paddingLeft="8dp"
-        android:textColorHint="@color/Szarawy_ciemny"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etProductName" />
@@ -62,9 +60,8 @@
         android:fontFamily="@font/barlow_semi_condensed_medium"
         android:hint="Fat"
         android:inputType="number"
-        android:textColor="@color/Szarawy_ciemny"
         android:paddingLeft="8dp"
-        android:textColorHint="@color/Szarawy_ciemny"
+        style="@style/textcolorGrayToWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etProductCalories" />
@@ -77,10 +74,9 @@
         android:ems="10"
         android:fontFamily="@font/barlow_semi_condensed_medium"
         android:hint="Protein"
-        android:paddingLeft="8dp"
         android:inputType="number"
-        android:textColor="@color/Szarawy_ciemny"
-        android:textColorHint="@color/Szarawy_ciemny"
+        android:paddingLeft="8dp"
+        style="@style/textcolorGrayToWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etProductFat" />
@@ -91,12 +87,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:paddingLeft="8dp"
         android:fontFamily="@font/barlow_semi_condensed_medium"
         android:hint="Carbs"
         android:inputType="number"
-        android:textColor="@color/Szarawy_ciemny"
-        android:textColorHint="@color/Szarawy_ciemny"
+        android:paddingLeft="8dp"
+        style="@style/textcolorGrayToWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etProductProtein" />

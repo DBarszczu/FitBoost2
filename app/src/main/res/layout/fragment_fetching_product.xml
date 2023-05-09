@@ -14,7 +14,7 @@
         android:fontFamily="@font/barlow_semi_condensed_black"
         android:text="Search for a product"
         android:textAlignment="center"
-        android:textColor="@color/Szarawy_ciemny"
+        style="@style/textcolorGrayToWhite"
         android:textSize="15pt" />
 
     <LinearLayout

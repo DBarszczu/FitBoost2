@@ -12,6 +12,7 @@
     >
 
     <LinearLayout
+        android:background="@color/Szarawy_ciemny"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -25,7 +26,9 @@
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
 
+
             <TextView
+
                 android:id="@+id/tvMealName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -34,7 +37,7 @@
                 android:text="Emp Name"
                 android:fontFamily="@font/barlow_semi_condensed_bold"
                 android:textAlignment="center"
-                android:textColor="@color/Szarawy_ciemny"
+                style="@style/textcolorWhiteToWhite"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
